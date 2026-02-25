@@ -1,0 +1,210 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+.navbar {
+    background: linear-gradient(135deg,rgba(30,30,47,0.85),rgba(52,52,74,0.85));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    width: -webkit-fill-available;
+    top:0;
+    z-index: 1000;
+}
+
+.navbar h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li{
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transform: color 0.3s;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent,red,transparent);
+    bottom: -6px;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar ul li a:hover::before {
+    content: '';
+    position: absolute;
+    background: url('images/2-bullet-shot-hole-png-image.png') no-repeat center;
+    background-size: cover;
+    width: 150px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 1;
+    pointer-events: none;
+}
+
+.hero {
+    height: 100vh;
+    background: url(images/GZM_GDLWwAAF5Qw.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.7rem;
+    margin-top: 20px;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+@keyframes slideUp {
+    0% {transform: translateY(50px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+} 
+
+.cta-button {
+    margin-top: 40px;
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #ff735f;
+    border: none;
+    cursor: pointer;
+    transition: background 0.8s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #e06656;
+    transform: scale(1.1);
+}
+
+.section {
+    padding: 10px 70px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    
+}
+
+.section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+}
+
+.game-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: 40px;
+}
+
+.game-card {
+    background: #1e1e2f;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.95);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+.game-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.game-card .game-info {
+    padding: 30px;
+}
+
+.section-large {
+    padding: 180px 90px;
+    background: #181824;
+    text-align: center;
+}
+
+.section-large h2 {
+    font-size: 4rem;
+}
+
+.section-large p {
+    font-size: 1.5rem;
+    line-height: 2.2;
+    margin: 30px auto;
+    width: 75%;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+    padding: 0 80px;
+}
+
+.feature {
+    width: 30%;
+    background: #1e1e2f;
+    padding: 80px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: #1e1e2f;
+    color: #fff;
+}
